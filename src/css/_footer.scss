@@ -1,0 +1,34 @@
+.footer {
+  padding: 15px;
+  margin-top: 5px;
+  box-shadow: -1px -1px 5px var(--basic-color);
+  min-height: max-content;
+  background-color: #4d4d4d;
+  position: sticky;
+  z-index: 15;
+
+  &__title {
+    width: 100px;
+    margin: 0 auto;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px #000000;
+  }
+
+  &__wrapper {
+    margin-top: 15px;
+
+    &__contact {
+      width: 500px;
+      color: white;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 5px;
+      text-shadow: 2px 2px 5px #000000;
+
+      &__link[href*="https"]::after {
+        padding-left: 3px;
+        content: "\1F875";
+      }
+    }
+  }
+}
