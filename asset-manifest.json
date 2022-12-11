@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-Project/static/css/main.ec0b09f1.css",
-    "main.js": "/React-Project/static/js/main.6af46d2b.js",
+    "main.js": "/React-Project/static/js/main.4e4ed35f.js",
     "static/js/186.f37a2d0c.chunk.js": "/React-Project/static/js/186.f37a2d0c.chunk.js",
     "static/js/787.28cb0dcd.chunk.js": "/React-Project/static/js/787.28cb0dcd.chunk.js",
     "static/media/vodopad.jpg": "/React-Project/static/media/vodopad.109480d48b38d772ca30.jpg",
@@ -9,12 +9,12 @@
     "static/media/photo.png": "/React-Project/static/media/photo.5c12c10eae48c69596a0.png",
     "index.html": "/React-Project/index.html",
     "main.ec0b09f1.css.map": "/React-Project/static/css/main.ec0b09f1.css.map",
-    "main.6af46d2b.js.map": "/React-Project/static/js/main.6af46d2b.js.map",
+    "main.4e4ed35f.js.map": "/React-Project/static/js/main.4e4ed35f.js.map",
     "186.f37a2d0c.chunk.js.map": "/React-Project/static/js/186.f37a2d0c.chunk.js.map",
     "787.28cb0dcd.chunk.js.map": "/React-Project/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ec0b09f1.css",
-    "static/js/main.6af46d2b.js"
+    "static/js/main.4e4ed35f.js"
   ]
 }
