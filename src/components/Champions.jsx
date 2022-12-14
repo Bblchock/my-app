@@ -8,18 +8,39 @@ const Champions = () => {
 	const [counter, setCounter] = useState(true);
 	const { items, currentСhampions } = useSelector((state) => state.champions);
 	useEffect(() => {
-		//Если список чемпионов, если его нет в LS
+		//Запросить список чемпионов, если его нет в LS
 		if (counter && items == 0) {
 			dispatch(fetchChampions());
 			setCounter(false);
 		};
 	}, [dispatch]);
 
+	const assignClass = (value) => {
+		const sketch = 'champions--wrapper__main__champion';
+		let rung;
+		switch (value) {
+			case '5':
+				rung = '__rung-five';
+				break;
+			case '6':
+				rung = '__rung-six';
+				break;
+			case '7':
+				rung = '__rung-seven';
+				break;
+
+			default:
+				rung = '';
+				break;
+		}
+		return sketch + rung;
+	}
+
 	return (
 		<main className='champions--wrapper__main'>
 			{/* Отрисовать чемпионов */}
 			{currentСhampions.map((obj, id) => (
-				<div key={id} className='champions--wrapper__main__champion' style={{
+				<div key={id} className={assignClass(obj.rung)} style={{
 					backgroundImage: `url(${obj.img})`
 				}}>
 					<p className='champions--wrapper__main__champion__name'>{obj.name}</p>
