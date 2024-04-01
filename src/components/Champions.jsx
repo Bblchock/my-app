@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 const Champions = () => {
 	const dispatch = useDispatch();
 	const [counter, setCounter] = useState(true);
-	const { items, currentСhampions } = useSelector((state) => state.champions);
+	const { items, currentChampions } = useSelector((state) => state.champions);
 	useEffect(() => {
 		//Запросить список чемпионов, если его нет в LS
 		if (counter && items == 0) {
@@ -39,7 +39,7 @@ const Champions = () => {
 	return (
 		<main className='champions--wrapper__main'>
 			{/* Отрисовать чемпионов */}
-			{currentСhampions.map((obj, id) => (
+			{currentChampions.map((obj, id) => (
 				<div key={id} className={assignClass(obj.rung)} style={{
 					backgroundImage: `url(${obj.img})`
 				}}>

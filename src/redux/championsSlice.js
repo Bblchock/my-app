@@ -15,7 +15,7 @@ export const fetchChampions = createAsyncThunk(
 
 const initialState = {
 	items: getChampionsLS(),
-	currentСhampions: getChampionsLS(),
+	currentChampions: getChampionsLS(),
 	filterButton: filterButtonState.slice(),
 	currentFilterButton: filterButtonState.slice(),
 	status: null,
@@ -26,9 +26,9 @@ export const champions = createSlice({
 	name: 'champions',
 	initialState,
 	reducers: {
-		setCurrentСhampions: (state, action) => {
+		setCurrentChampions: (state, action) => {
 			//Записать в state отфильтрованных чемпионов
-			state.currentСhampions = action.payload;
+			state.currentChampions = action.payload;
 		},
 		setClassButton: (state, action) => {
 			//Подсветить нажатые кнопки фильтра
@@ -40,21 +40,20 @@ export const champions = createSlice({
 			}
 		},
 	},
-	extraReducers: {
-		[fetchChampions.pending]: (state) => {
-			state.status = 'loading';
-			state.error = null;
-		},
-		[fetchChampions.fulfilled]: (state, action) => {
-			//Записать запрошенный список чемпионов в state и LS
-			state.status = 'resolved';
-			state.items = action.payload;
-			state.currentСhampions = action.payload;
-			localStorage.setItem('championsData', JSON.stringify(action.payload));
-		},
-		[fetchChampions.rejected]: (state, action) => { },
-	}
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchChampions.pending, (state) => {
+        state.status = "loading";
+        state.error = null;
+      })
+      .addCase(fetchChampions.fulfilled, (state, action) => {
+        state.status = 'resolved';
+        state.items = action.payload;
+        state.currentChampions = action.payload;
+        localStorage.setItem('championsData', JSON.stringify(action.payload));
+      })
+  },
 });
 
-export const { setCurrentСhampions, setClassButton } = champions.actions;
+export const { setCurrentChampions: setCurrentChampions, setClassButton } = champions.actions;
 export default champions.reducer;
