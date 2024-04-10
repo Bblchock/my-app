@@ -9,7 +9,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "preview": "vite preview",
-    "tests": "vitest run"
+    "tests": "vitest run",
+    "prettier": "prettier . --write"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.2",
@@ -30,9 +31,13 @@
     "@typescript-eslint/parser": "^7.4.0",
     "@vitejs/plugin-react-swc": "^3.6.0",
     "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "gh-pages": "^4.0.0",
+    "prettier": "^3.2.5",
     "typescript": "^5.4.3",
     "vite": "^5.2.7"
   }

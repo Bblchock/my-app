@@ -1,1 +1,4 @@
-module.exports = require('@astral/prettier-config');
+module.exports = {
+  singleQuote: true,
+  trailingComma: 'all',
+};
