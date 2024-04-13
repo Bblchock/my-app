@@ -46,7 +46,7 @@ export const Champions = () => {
       {/* Отрисовать чемпионов */}
       {currentChampions.map((obj: Champion) => (
         <div
-          key={obj.id}
+          key={obj.name}
           className={assignClass(obj.rung)}
           style={{
             backgroundImage: `url(${obj.img})`,
