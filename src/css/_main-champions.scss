@@ -44,11 +44,9 @@
 %champions-adaptability {
 
 	//100%
-	@media (max-width: 2000px) {
-		margin: 5px;
-		height: 270px;
-		width: 190px;
-	}
+	margin: 5px;
+  height: 270px;
+  width: 190px;
 
 	//70%
 	@media (max-width: 1390px) {
@@ -144,9 +142,7 @@
 		flex: 1 100px;
 
 		//100%
-		@media (max-width: 2000px) {
-			width: 1002px;
-		}
+    width: 1002px;
 
 		//70%
 		@media (max-width: 1390px) {
@@ -197,9 +193,7 @@
 				color: rgb(230, 230, 230);
 
 				//100%
-				@media (max-width: 2000px) {
-					top: 83%;
-				}
+        top: 83%;
 
 				//70%
 				@media (max-width: 1390px) {
