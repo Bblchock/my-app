@@ -1,5 +1,4 @@
-import { Champions } from '../components';
-import Filter from '../components/Filter';
+import { Champions, Filter } from 'components';
 
 const ChampFilter = () => {
   return (

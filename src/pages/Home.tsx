@@ -1,5 +1,4 @@
-import React from 'react';
-import photo from '../img/photo.png';
+import photo from 'assets/photo.png';
 
 export const Home = () => {
   return (

@@ -1,9 +1,12 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { HashRouter } from 'react-router-dom';
-import { App } from './App';
-import { store } from './redux/store';
+import { StrictMode } from 'react';
 import { Provider } from 'react-redux';
+import { HashRouter } from 'react-router-dom';
+
+import { createRoot } from 'react-dom/client';
+
+import { App } from './App';
+
+import { store } from 'redux';
 
 const renderApp = (): void => {
   const root = document.getElementById('root');
@@ -15,9 +18,9 @@ const renderApp = (): void => {
   createRoot(root).render(
     <Provider store={store}>
       <HashRouter basename="/">
-        <React.StrictMode>
+        <StrictMode>
           <App />
-        </React.StrictMode>
+        </StrictMode>
       </HashRouter>
     </Provider>,
   );

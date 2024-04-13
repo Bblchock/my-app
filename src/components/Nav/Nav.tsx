@@ -3,10 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { setNav } from '../redux/navigationSlice';
-import { RootState } from '../redux/store';
+import { LinkPage } from '../LinkPage';
 
-import { LinkPage } from './LinkPage';
+import { setNav, RootState } from 'redux';
 
 export const Nav = () => {
   const dispatch = useDispatch();

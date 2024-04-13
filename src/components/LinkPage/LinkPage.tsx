@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
 
-type PropsLinkPage = {
+type LinkPage = {
   linkPage: string;
   page: string;
   className: string;
@@ -10,7 +10,7 @@ type PropsLinkPage = {
 };
 
 export const LinkPage = memo(
-  ({ linkPage, page, className, onClick, id }: PropsLinkPage) => {
+  ({ linkPage, page, className, onClick, id }: LinkPage) => {
     return (
       // Кнопки навигации
       <Link to={linkPage} className={className} onClick={() => onClick(id)}>

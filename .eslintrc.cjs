@@ -24,9 +24,19 @@ module.exports = {
             "position": "before"
           },
           {
-            "pattern": "./components",
-            "group": "builtin",
-            "position": "before"
+            "pattern": "components",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "redux",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "pages",
+            "group": "internal",
+            "position": "after"
           },
         ],
         "newlines-between": "always",

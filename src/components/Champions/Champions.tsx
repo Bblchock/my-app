@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { fetchChampions } from '../redux/championsSlice';
-import { RootState } from '../redux/store';
+import { Champion } from 'assets';
+
+import { fetchChampions, RootState } from 'redux';
 
 export const Champions = () => {
   const dispatch = useDispatch();
@@ -43,9 +44,9 @@ export const Champions = () => {
   return (
     <main className="champions--wrapper__main">
       {/* Отрисовать чемпионов */}
-      {currentChampions.map((obj, id) => (
+      {currentChampions.map((obj: Champion) => (
         <div
-          key={id}
+          key={obj.id}
           className={assignClass(obj.rung)}
           style={{
             backgroundImage: `url(${obj.img})`,

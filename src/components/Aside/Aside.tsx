@@ -1,11 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
 
-import { setTheme } from '../redux/themeSlice';
-import { RootState } from '../redux/store';
-import { BasicColor, Theme } from '../redux/utils';
+import { Header } from '../Header';
+import { HouseSVG } from '../HouseSVG';
 
-import { Header } from './Header';
-import { HouseSVG } from './HouseSVG';
+import { setTheme, RootState, BasicColor, Theme } from 'redux';
 
 type Aside = {
   onChangeNav: (id: number) => void;

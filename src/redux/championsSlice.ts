@@ -45,12 +45,10 @@ export const champions = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchChampions.pending, (state: RootState) => {
-        console.log(state);
         state.status = 'loading';
         state.error = null;
       })
       .addCase(fetchChampions.fulfilled, (state: RootState, action) => {
-        console.log(state);
         state.status = 'resolved';
         state.items = action.payload;
         state.currentChampions = action.payload;

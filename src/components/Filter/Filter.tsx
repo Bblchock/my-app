@@ -1,11 +1,15 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import { setCurrentChampions, setClassButton } from '../redux/championsSlice';
-import { RootState } from '../redux/store';
-import { Champion } from '../img/champions';
-import { FilterButtonState } from '../redux/utils.ts';
+import { Champion } from 'assets';
 
-const Filter = () => {
+import {
+  setCurrentChampions,
+  setClassButton,
+  RootState,
+  FilterButtonState,
+} from 'redux';
+
+export const Filter = () => {
   const dispatch = useDispatch();
   const { items, currentFilterButton, currentChampions } = useSelector(
     (state: RootState) => state.champions,
@@ -37,7 +41,6 @@ const Filter = () => {
         break;
       default:
         champions = currentChampions.filter((arr: Champion) => {
-          console.log(arr);
           return arr.position.includes(obj.key) || arr.role.includes(obj.key);
         });
         break;
@@ -76,5 +79,3 @@ const Filter = () => {
     </div>
   );
 };
-
-export default Filter;

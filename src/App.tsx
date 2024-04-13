@@ -1,12 +1,13 @@
-import './css/app.scss';
+import 'css/app.scss';
 import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
-import { Aside, Nav, Footer } from './components';
+import { Aside, Nav, Footer } from 'components';
 
-import { setNav } from './redux/navigationSlice';
-import { Home } from './pages/Home';
+import { setNav } from 'redux';
+
+import { Home } from 'pages';
 
 const ChampFilter = lazy(() => import('./pages/ChampFilter'));
 

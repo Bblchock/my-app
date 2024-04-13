@@ -24,6 +24,14 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./src",
+    "paths": {
+      "components": ["components"],
+      "redux": ["redux"],
+      "pages": ["pages"],
+      "assets": ["assets"],
+      "css": ["css"],
+    }
   },
   "include": [
     "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.mts"
