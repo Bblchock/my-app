@@ -24,13 +24,14 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "paths": {
       "components": ["components"],
-      "redux": ["redux"],
-      "pages": ["pages"],
-      "assets": ["assets"],
-      "css": ["css"],
+      "pages/*": ["pages/*"],
+      "shared": ["shared"],
+      "data": ["data"],
+      "modules": ["modules"],
+      "public": ["public"],
     }
   },
   "include": [
